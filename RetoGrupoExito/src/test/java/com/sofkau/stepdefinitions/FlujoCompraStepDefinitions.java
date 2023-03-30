@@ -10,9 +10,11 @@ import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
 import org.apache.log4j.Logger;
+import org.junit.jupiter.api.Assertions;
 
 ;
 import java.io.IOException;
+import java.nio.channels.ScatteringByteChannel;
 import java.util.List;
 
 import static com.sofkau.tasks.AgregarProductoMenor.agregarProductoMenor;
@@ -38,36 +40,42 @@ public class FlujoCompraStepDefinitions extends Configuracion {
             LOGGER.info("Inicio de la Automatizacion");
             theActorInTheSpotlight().wasAbleTo(
                     new AbrirPaginaInicial(),
-                    navegarAMiCuenta(),
-                    iniciarSesion()
-                        .conElUsuario(credentials.get(0))
-                        .yConLaContrasenna(credentials.get(1))
+                    navegarAMiCuenta()
             );
         }catch (Exception e){
-            quitarDriver();
             LOGGER.warn(e.getMessage());
+            Assertions.fail();
+            quitarDriver();
         }
 
     }
 
     @When("he iniciado sesion con mis credenciales")
     public void heIniciadoSesionConMisCredenciales() {
-
+        try {
+            theActorInTheSpotlight().attemptsTo(
+                    iniciarSesion()
+                            .conElUsuario(credentials.get(0))
+                            .yConLaContrasenna(credentials.get(1))
+            );
+        }catch (Exception e){
+            LOGGER.warn(e.getMessage());
+            Assertions.fail();
+            quitarDriver();
+        }
     }
 
     @When("he agregado el producto que quiero comprar")
     public void heAgregadoElProductoQueQuieroComprar() {
         try {
             theActorInTheSpotlight().attemptsTo(
+                    realizarBusqueda().yConElProducto("Lentejas"),
                     ingresarUbicacion(),
-                    realizarBusqueda().yConElProducto("Lentejas")
-            );
-            Thread.sleep(4000);
-            theActorInTheSpotlight().attemptsTo(
                     agregarProductoMenor()
             );
         }catch (Exception e){
             LOGGER.warn(e.getMessage());
+            Assertions.fail();
             quitarDriver();
         }
 
