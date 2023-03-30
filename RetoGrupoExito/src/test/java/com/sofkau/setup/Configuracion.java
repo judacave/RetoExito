@@ -21,6 +21,7 @@ import static net.thucydides.core.webdriver.ThucydidesWebDriverSupport.getDriver
 public class Configuracion {
     private static final String SWITCHES = "--remote-allow-origins=*";
     private static final String INCOGNITO = "--incognito";
+    private static final String POPUP = "--disable-popup-blocking";
     private static final String ACTOR = "Juan David";
     private static final int DIEZ_SEGUNDOS = 10;
 
@@ -39,6 +40,7 @@ public class Configuracion {
         ChromeOptions co = new ChromeOptions();
         co.addArguments(SWITCHES);
         co.addArguments(INCOGNITO);
+        co.addArguments(POPUP);
         co.addArguments("--disable-notifications");
         DesiredCapabilities cap=new DesiredCapabilities();
         cap.setCapability(ChromeOptions.CAPABILITY, co);

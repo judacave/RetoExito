@@ -1,22 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Compra de productos en Almacen Exito" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-30T18:09:12" hostname="JUANDAVIDPC" time="30.648">
+<testsuite name="Compra de productos en Almacen Exito" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-30T21:03:49" hostname="JUANDAVIDPC" time="32.112">
   <properties/>
-  <testcase name="Compra de el producto mas barato" classname="Compra de productos en Almacen Exito" time="30.648"/>
-  <system-out><![CDATA[2023-03-30 13:09:15 INFO  FlujoCompraStepDefinitions:36 Inicio de la Automatizacion
+  <testcase name="Compra de el producto mas barato" classname="Compra de productos en Almacen Exito" time="32.112"/>
+  <system-out><![CDATA[2023-03-30 16:03:53 INFO  FlujoCompraStepDefinitions:38 Inicio de la Automatizacion
+2023-03-30 16:04:16 WARN  FlujoCompraStepDefinitions:70 element click intercepted: Element <input class="vtex-styleguide-9-x-input ma0 border-box vtex-styleguide-9-x-hideDecorators vtex-styleguide-9-x-noAppearance br2  br-0 br--left  w-100 bn outline-0 bg-base c-on-base b--muted-4 hover-b--muted-3 t-body pl5 " autocomplete="off" placeholder="Buscar en exito.com" type="text" id="downshift-0-input" value=""> is not clickable at point (830, 71). Other element would receive the click: <div role="presentation" class="undefined bg-base--inverted o-50 h-100"></div>
+  (Session info: chrome=111.0.5563.147)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'JUANDAVIDPC', ip: '192.168.0.21', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.147, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\juand\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52852}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6e99e5c90858f294b87ec48684262804
 ]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}) on port 34508
+  <system-err><![CDATA[Starting ChromeDriver 111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}) on port 40039
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-mar 30, 2023 1:09:13 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+mar 30, 2023 4:03:51 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACIÓN: Detected dialect: W3C
-mar 30, 2023 1:09:13 P. M. org.openqa.selenium.remote.DesiredCapabilities chrome
+mar 30, 2023 4:03:51 P. M. org.openqa.selenium.remote.DesiredCapabilities chrome
 INFORMACIÓN: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-Starting ChromeDriver 111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}) on port 12350
+Starting ChromeDriver 111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}) on port 44903
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-mar 30, 2023 1:09:15 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+mar 30, 2023 4:03:53 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACIÓN: Detected dialect: W3C
 ]]></system-err>
 </testsuite>

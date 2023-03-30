@@ -15,6 +15,8 @@ import org.apache.log4j.Logger;
 import java.io.IOException;
 import java.util.List;
 
+import static com.sofkau.tasks.AgregarProductoMenor.agregarProductoMenor;
+import static com.sofkau.tasks.IngresarUbicacion.ingresarUbicacion;
 import static com.sofkau.tasks.IniciarSesion.iniciarSesion;
 import static com.sofkau.tasks.NavegarAMiCuenta.navegarAMiCuenta;
 import static com.sofkau.tasks.RealizarBusqueda.realizarBusqueda;
@@ -57,7 +59,12 @@ public class FlujoCompraStepDefinitions extends Configuracion {
     public void heAgregadoElProductoQueQuieroComprar() {
         try {
             theActorInTheSpotlight().attemptsTo(
+                    ingresarUbicacion(),
                     realizarBusqueda().yConElProducto("Lentejas")
+            );
+            Thread.sleep(4000);
+            theActorInTheSpotlight().attemptsTo(
+                    agregarProductoMenor()
             );
         }catch (Exception e){
             LOGGER.warn(e.getMessage());

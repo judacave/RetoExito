@@ -15,5 +15,8 @@ public class PaginaInicial extends PageObject {
     public static final Target BOTON_BUSQUEDA = Target.the("Boton Busqueda")
             .located(By.cssSelector(".vtex-store-components-3-x-searchBarIcon.vtex-store-components-3-x-searchBarIcon--search.flex.items-center.pointer.bn.bg-transparent.outline-0.pv0.pl0.pr3"));
 
+    public static final Target BOTON_UBICACION = Target.the("Sellecionar ubicacion")
+            .located(By.cssSelector(".exito-geolocation-3-x-addressResult"));
+
 
 }
