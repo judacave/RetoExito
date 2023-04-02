@@ -17,8 +17,7 @@ public class IngresarUbicacion implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-//                WaitUntil.the(BOTON_UBICACION, isClickable()).forNoMoreThan(10).seconds(),
-//                Click.on(BOTON_UBICACION),
+
                 Click.on(CAMPO_CIUDAD),
                 Hit.the(Keys.ENTER).into(CAMPO_CIUDAD),
                 Click.on(CAMPO_TIENDA),

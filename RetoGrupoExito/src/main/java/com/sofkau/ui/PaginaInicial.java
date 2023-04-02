@@ -18,5 +18,7 @@ public class PaginaInicial extends PageObject {
     public static final Target BOTON_UBICACION = Target.the("Sellecionar ubicacion")
             .located(By.cssSelector(".exito-geolocation-3-x-addressResult"));
 
+    public static final Target BOTON_CARRITO = Target.the("Carrito de compras")
+            .located(By.cssSelector(".exito-header-3-x-minicartContainer"));
 
 }

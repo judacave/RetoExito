@@ -6,9 +6,6 @@ import com.sofkau.tasks.AbrirPaginaInicial;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.cucumber.java.es.Cuando;
-import io.cucumber.java.es.Dado;
-import io.cucumber.java.es.Entonces;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.Assertions;
 
@@ -17,12 +14,15 @@ import java.io.IOException;
 import java.nio.channels.ScatteringByteChannel;
 import java.util.List;
 
+import static com.sofkau.questions.MensajeFinalizarCompra.mensajeFinalizarCompra;
 import static com.sofkau.tasks.AgregarProductoMenor.agregarProductoMenor;
+import static com.sofkau.tasks.FinalizarCompra.finalizarCompra;
 import static com.sofkau.tasks.IngresarUbicacion.ingresarUbicacion;
 import static com.sofkau.tasks.IniciarSesion.iniciarSesion;
 import static com.sofkau.tasks.NavegarAMiCuenta.navegarAMiCuenta;
 import static com.sofkau.tasks.RealizarBusqueda.realizarBusqueda;
 import static com.sofkau.util.LoadCredentials.getCredentials;
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static org.hamcrest.CoreMatchers.equalTo;
 
@@ -71,7 +71,8 @@ public class FlujoCompraStepDefinitions extends Configuracion {
             theActorInTheSpotlight().attemptsTo(
                     realizarBusqueda().yConElProducto("Lentejas"),
                     ingresarUbicacion(),
-                    agregarProductoMenor()
+                    agregarProductoMenor(),
+                    finalizarCompra()
             );
         }catch (Exception e){
             LOGGER.warn(e.getMessage());
@@ -84,10 +85,15 @@ public class FlujoCompraStepDefinitions extends Configuracion {
     @Then("se muestra el modulo para finalizar la compra")
     public void seMuestraElModuloParaFinalizarLaCompra() {
         try {
-            Thread.sleep(5000);
-            quitarDriver();
+            theActorInTheSpotlight().should(
+                    seeThat(mensajeFinalizarCompra(), equalTo("Finalizar la compra"))
+            );
+
         }catch (Exception e){
-            e.getMessage();
+            LOGGER.warn(e.getMessage());
+            quitarDriver();
+        }finally {
+            quitarDriver();
         }
 
     }

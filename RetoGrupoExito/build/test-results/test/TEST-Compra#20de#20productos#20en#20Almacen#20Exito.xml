@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Compra de productos en Almacen Exito" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-30T21:58:49" hostname="JUANDAVIDPC" time="44.653">
+<testsuite name="Compra de productos en Almacen Exito" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-04-02T01:25:44" hostname="JUANDAVIDPC" time="50.58">
   <properties/>
-  <testcase name="Compra de el producto mas barato" classname="Compra de productos en Almacen Exito" time="44.653"/>
-  <system-out><![CDATA[2023-03-30 16:58:53 INFO  FlujoCompraStepDefinitions:40 Inicio de la Automatizacion
+  <testcase name="Compra de el producto mas barato" classname="Compra de productos en Almacen Exito" time="50.58"/>
+  <system-out><![CDATA[2023-04-01 20:25:49 INFO  FlujoCompraStepDefinitions:40 Inicio de la Automatizacion
 ]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}) on port 25133
+  <system-err><![CDATA[Starting ChromeDriver 111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}) on port 46891
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-mar 30, 2023 4:58:51 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+abr 01, 2023 8:25:47 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACIÓN: Detected dialect: W3C
-mar 30, 2023 4:58:51 P. M. org.openqa.selenium.remote.DesiredCapabilities chrome
+abr 01, 2023 8:25:47 P. M. org.openqa.selenium.remote.DesiredCapabilities chrome
 INFORMACIÓN: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-Starting ChromeDriver 111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}) on port 13475
+Starting ChromeDriver 111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}) on port 48258
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-mar 30, 2023 4:58:53 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+abr 01, 2023 8:25:48 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACIÓN: Detected dialect: W3C
 ]]></system-err>
 </testsuite>

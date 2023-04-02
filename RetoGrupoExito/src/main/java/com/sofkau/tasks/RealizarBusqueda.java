@@ -8,8 +8,10 @@ import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
 import static com.sofkau.ui.PaginaInicial.*;
+import static com.sofkau.ui.PaginaInicioSesion.BOTON_INICIAR_SESION;
 import static com.sofkau.ui.PaginaInicioSesion.CAMPO_EMAIL;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isClickable;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isNotVisible;
 
 public class RealizarBusqueda implements Task {
     private String producto;
@@ -21,6 +23,7 @@ public class RealizarBusqueda implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
+                WaitUntil.the(BOTON_INICIAR_SESION, isNotVisible()).forNoMoreThan(10).seconds(),
                 WaitUntil.the(CAMPO_BUSQUEDA, isClickable()).forNoMoreThan(10).seconds(),
                 Click.on(CAMPO_BUSQUEDA),
                 Enter.theValue(producto).into(CAMPO_BUSQUEDA),
